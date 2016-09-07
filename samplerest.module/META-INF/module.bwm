@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_fnbuQGU-EeaMifWCmDJ_Fw" targetNamespace="http://tns.tibco.com/bw/composite/samplerest.module" name="samplerest.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_bACP4GU_EeaMifWCmDJ_Fw" name="user" promote="ComponentProcess/user">
+    <sca:interface.wsdl xmi:id="_bAJkoGU_EeaMifWCmDJ_Fw" interface="http://xmlns.example.com/20160818142258PLT#wsdl.interface(user)"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_bASukGU_EeaMifWCmDJ_Fw" name="RestService" path="/user" docBasePath="http://localhost:7777/samplerest.module" docResourcePath="User" basePath="/" connector="samplerest.module.User" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/samplerest.module.Process-User.json">
+      <operation xmi:id="_bAXAAGU_EeaMifWCmDJ_Fw" operationName="get" nickname="get-user" httpMethod="GET" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_bBFYwGU_EeaMifWCmDJ_Fw"/>
+      <clientFormat>json</clientFormat>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_bAXAAWU_EeaMifWCmDJ_Fw" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_gKA24GU-EeaMifWCmDJ_Fw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gKKn4GU-EeaMifWCmDJ_Fw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gKOSQGU-EeaMifWCmDJ_Fw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gKRVkGU-EeaMifWCmDJ_Fw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gKU_8GU-EeaMifWCmDJ_Fw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gKYDQGU-EeaMifWCmDJ_Fw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_gKbGkGU-EeaMifWCmDJ_Fw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="__BE1MGU_EeaMifWCmDJ_Fw" name="User" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_FZM04GVAEeaMifWCmDJ_Fw" name="Region" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_f84Z0GU-EeaMifWCmDJ_Fw" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_f85n8GU-EeaMifWCmDJ_Fw" processName="samplerest.module.Process"/>
+    <sca:service xmi:id="_a_9-cGU_EeaMifWCmDJ_Fw" name="user">
+      <sca:interface.wsdl xmi:id="_a_-lgGU_EeaMifWCmDJ_Fw" interface="http://xmlns.example.com/20160818142258PLT#wsdl.interface(user)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
